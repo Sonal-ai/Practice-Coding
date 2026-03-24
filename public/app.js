@@ -50,6 +50,9 @@ function App() {
           Shared list of basic programming problems. Tick them off as you
           practice; changes are saved so others can see the progress.
         </p>
+        <p style={{ marginTop: '0.5rem', fontStyle: 'italic', fontSize: '0.9rem' }}>
+          Questions sourced from the <a href="https://www.geeksforgeeks.org/computer-science-fundamentals/basic-programming-problems/" target="_blank" rel="noopener noreferrer">GeeksforGeeks Basic Programming Problems blog</a>.
+        </p>
         <button onClick={fetchQuestions} className="refresh-btn">Reload list</button>
       </header>
 
