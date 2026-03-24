@@ -12,6 +12,10 @@ const QuestionSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    practiceUrl: {
+      type: String,
+      trim: true,
+    },
     completed: {
       type: Boolean,
       default: false,

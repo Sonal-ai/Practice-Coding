@@ -38,11 +38,11 @@ app.get('/api/questions', async (req, res) => {
 
 app.post('/api/questions', async (req, res) => {
   try {
-    const { title, url, order } = req.body;
+    const { title, url, practiceUrl, order } = req.body;
     const maxOrderDoc = await Question.findOne().sort({ order: -1 });
     const nextOrder = order || (maxOrderDoc ? maxOrderDoc.order + 1 : 1);
 
-    const question = new Question({ title, url, order: nextOrder });
+    const question = new Question({ title, url, practiceUrl, order: nextOrder });
     await question.save();
     res.status(201).json(question);
   } catch (err) {

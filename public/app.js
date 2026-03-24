@@ -73,6 +73,11 @@ function App() {
                 <a href={q.url} target="_blank" rel="noopener noreferrer">
                   {q.title}
                 </a>
+                {q.practiceUrl && (
+                  <span style={{ marginLeft: '10px', fontSize: '0.85em', color: '#ff6200' }}>
+                    <a href={q.practiceUrl} target="_blank" rel="noopener noreferrer">[Practice]</a>
+                  </span>
+                )}
               </span>
             </label>
           </li>
